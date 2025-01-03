@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments | Student Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/dashboard.css">
+    <link rel="stylesheet" href="assets/assignments.css">
+    <link rel="stylesheet" href="assets/darkmode.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <button class="btn btn-link" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a class="navbar-brand" href="index.html">StudentPortal</a>
+            
+            <div class="d-flex align-items-center">
+                <!--dark mode toggle-->
+                <div class="dark-mode-toggle me-3">
+                    <button class="btn btn-link" id="darkModeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-link nav-link dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown">
+                        <img src="assets/img/wabil.JPG" alt="Profile Image" class="rounded-circle profile-image me-2" style="width: 30px; height: 30px;">
+                        Wabil
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="profile.html" data-page="profile"><i class="fas fa-user me-2"></i>Profile</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="profile.html"><i class="fas fa-sign-out-alt me-2"></i>Sign Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar and Content Wrapper -->
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <img src="assets/img/wabil.JPG" alt="Student" class="rounded-circle profile-image">
+                <h6 class="mt-2 profile-name">Wabil</h6>
+                <small class="text-muted">Student ID: 2024321321</small>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="wabildashboard.html" data-page="dashboard"><i class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
+                </li>
+                <li>
+                    <a href="wabiluser_profile.html" data-page="profile"><i class="fas fa-user me-2"></i>Profile</a>
+                </li>
+                <li>
+                    <a href="wabilcourses.html" data-page="courses"><i class="fas fa-book me-2"></i>Courses</a>
+                </li>
+                <li class="active">
+                    <a href="#" data-page="assignments"><i class="fas fa-file-alt me-2"></i>Assignments</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="content">
+            <div class="container-fluid">
+                <h2 class="mb-4">My Assignments</h2>
+
+                <!-- Assignments Table -->
+                <div class="card assignments-card">
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Course</th>
+                                    <th scope="col">Assignment</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Due Date</th>
+                                    <th scope="col">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>IMS560</td>
+                                    <td>Data Structures Project</td>
+                                    <td><span class="badge" style="background-color: rgb(214, 202, 32);">In Progress</span></td>
+                                    <td>Tomorrow</td>
+                                    <td>
+                                        <a href="#" class="btn btn-sm" style="background-color: #06c; color: #fff;">View</a>
+                                        <a href="#" class="btn btn-sm" style="background-color: #06c; color: #fff;">Submit</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>IMS501</td>
+                                    <td> Quiz 5</td>
+                                    <td><span class="badge" style="background-color: rgb(214, 202, 32);">In Progress</span></td>
+                                    <td>3 days</td>
+                                    <td>
+                                        <a href="#" class="btn btn-sm" style="background-color: #06c; color: #fff;">View</a>
+                                        <a href="#" class="btn btn-sm" style="background-color: #06c; color: #fff;">Submit</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>IMS555</td>
+                                    <td>User Interface Survey</td>
+                                    <td><span class="badge" style="background-color: rgb(206, 47, 19);">Not Started</span></td>
+                                    <td>1 week</td>
+                                    <td>
+                                        <a href="#" class="btn btn-sm" style="background-color: #06c; color: #fff;">View</a>
+                                        <a href="#" class="btn btn-sm" style="background-color: #06c; color: #fff;">Submit</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>IMS564</td>
+                                    <td>Assignment 2</td>
+                                    <td><span class="badge" style="background-color: #06c;">Completed</span></td>
+                                    <td>2 weeks ago</td>
+                                    <td>
+                                        <a href="#" class="btn btn-sm" style="background-color: #06c; color: #fff;">View</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>IMS511</td>
+                                    <td>Midterm Exam</td>
+                                    <td><span class="badge" style="background-color: rgb(119, 236, 10);">Graded</span></td>
+                                    <td>3 weeks ago</td>
+                                    <td>
+                                        <a href="#" class="btn btn-sm" style="background-color: #06c; color: #fff;">View</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->
+    
+<footer class="footer mt-auto py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Resources</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Student Guide</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Connect</h5>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-12 text-center">
+                <p class="mb-0">&copy; 2024 StudentPortal. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/darkmode.js"></script>
+</body>
+</html>

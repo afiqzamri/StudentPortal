@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | Student Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/dashboard.css">
+    <link rel="stylesheet" href="assets/profile.css">
+    <link rel="stylesheet" href="assets/darkmode.css">
+    <style>
+        .progress-bar {
+            transition: width 2s ease-in-out; /* Smooth animation for width changes */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <button class="btn btn-link" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a class="navbar-brand" href="index.html">StudentPortal</a>
+            
+            <div class="d-flex align-items-center">
+                <!--dark mode toggle-->
+                <div class="dark-mode-toggle me-3">
+                    <button class="btn btn-link" id="darkModeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-link nav-link dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown">
+                        <img src="assets/img/iffah.JPG" alt="Profile Image" class="rounded-circle profile-image me-2" style="width: 30px; height: 30px;">
+                        Iffah
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="profile.html" data-page="profile"><i class="fas fa-user me-2"></i>Profile</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="profile.html"><i class="fas fa-sign-out-alt me-2"></i>Sign Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar and Content Wrapper -->
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <img src="assets/img/iffah.JPG" alt="Student" class="rounded-circle profile-image">
+                <h6 class="mt-2 profile-name">Iffah</h6>
+                <small class="text-muted">Student ID: 2024616161</small>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="iffahdashboard.html" data-page="dashboard"><i class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
+                </li>
+                <li class="active">
+                    <a href="iffahuser_profile.html" data-page="profile"><i class="fas fa-user me-2"></i>Profile</a>
+                </li>
+                <li>
+                    <a href="iffahcourses.html" data-page="courses"><i class="fas fa-book me-2"></i>Courses</a>
+                </li>
+                <li>
+                    <a href="iffahassignments.html" data-page="assignments"><i class="fas fa-file-alt me-2"></i>Assignments</a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <!-- Profile Content -->
+        <div id="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- Profile Overview -->
+                    <div class="col-lg-4 mb-4">
+                        <div class="card profile-card">
+                            <div class="card-body text-center">
+                                <div class="profile-image-wrapper mb-4">
+                                    <img src="assets/img/iffah.JPG" alt="John Doe" class="rounded-circle large-profile-image">
+                                    <button class="btn btn-sm btn-light edit-photo" style="background-color: #06c; color: #fff;">
+                                        <i class="fas fa-camera"></i>
+                                    </button>
+                                </div>
+                                <h4 class="mb-1 profile-name">Iffah</h4>
+                                <p class="text-muted mb-3">Degree of Information Science</p>
+                                <div class="profile-stats mb-4">
+                                    <div class="row g-4">
+                                        <div class="col-4">
+                                            <h5>3.8</h5>
+                                            <small class="text-muted">GPA</small>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5>86</h5>
+                                            <small class="text-muted">Credits</small>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5>5</h5>
+                                            <small class="text-muted">Courses</small>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profile Details -->
+                    <div class="col-lg-8">
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">Personal Information</h5>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="row mb-4">
+                                        <div class="col-md-6">
+                                            <label class="form-label">First Name</label>
+                                            <input type="text" class="form-control" value="Iffah" readonly>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Last Name</label>
+                                            <input type="text" class="form-control" value="Hanis" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-4">
+                                        <div class="col-md-6">
+                                            <label class="form-label">Email</label>
+                                            <input type="email" class="form-control" value="iffahcutee22@gmail.com" readonly>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Student ID</label>
+                                            <input type="text" class="form-control" value="2024616161" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-4">
+                                        <div class="col-md-6">
+                                            <label class="form-label">Major</label>
+                                            <input type="text" class="form-control" value="Information System" readonly>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Year</label>
+                                            <input type="text" class="form-control" value="2024" readonly>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Academic Progress -->
+                    <div class="col-lg-12">
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">Academic Progress</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="progress-item mb-4">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Core Requirements</span>
+                                        <span>75%</span>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 0;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="progress-item mb-4">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Major Requirements</span>
+                                        <span>60%</span>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 0;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="progress-item">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Electives</span>
+                                        <span>40%</span>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 0;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Student Guide</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Connect</h5>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2024 StudentPortal. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const progressBars = document.querySelectorAll(".progress-bar");
+    progressBars.forEach(bar => {
+        bar.style.width = bar.getAttribute("aria-valuenow") + "%";
+    });
+});
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/darkmode.js"></script>
+</body>
+</html>

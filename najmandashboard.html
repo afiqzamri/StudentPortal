@@ -1,0 +1,279 @@
+      
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Student Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/dashboard.css">
+    <link rel="stylesheet" href="assets/darkmode.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <button class="btn btn-link" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a class="navbar-brand" href="index.html">StudentPortal</a>
+            
+            <div class="d-flex align-items-center">
+                <!--dark mode toggle-->
+                <div class="dark-mode-toggle me-3">
+                    <button class="btn btn-link" id="darkModeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-link nav-link dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown">
+                        <img src="assets/img/najman.JPG" alt="Profile Image" class="rounded-circle profile-image me-2" style="width: 30px; height: 30px;">
+                        Najman
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="profile.html" data-page="profile"><i class="fas fa-user me-2"></i>Profile</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="profile.html"><i class="fas fa-sign-out-alt me-2"></i>Sign Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar and Content Wrapper -->
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <img src="assets/img/najman.JPG" alt="Student" class="rounded-circle profile-image">
+                <h6 class="mt-2 profile-name">Najman</h6>
+                <small class="text-muted">Student ID: 2024098098</small>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#" data-page="dashboard"><i class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
+                </li>
+                <li>
+                    <a href="najmanuser_profile.html" data-page="profile"><i class="fas fa-user me-2"></i>Profile</a>
+                </li>
+                <li>
+                    <a href="najmancourses.html" data-page="courses"><i class="fas fa-book me-2"></i>Courses</a>
+                </li>
+                <li>
+                    <a href="najmanassignments.html" data-page="assignments"><i class="fas fa-file-alt me-2"></i>Assignments</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content -->
+              
+    <div id="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8">
+                    <!-- Welcome and Progress -->
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <div class="card dashboard-card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Welcome, Najman!</h5>
+                                    <p class="card-text">Here's a summary of your academic progress:</p>
+                                    <div class="progress mb-3">
+                                        <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                    </div>
+                                    <p class="card-text"><small class="text-muted">Credits Earned: 90/120</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card dashboard-card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Today's Schedule</h5>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">IMS560- Advance Database (10:00 AM - 11:30 AM)</li>
+                                        <li class="list-group-item">IMS501 - Data Visualisation (1:00 PM - 2:30 PM)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Course Overview -->
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <div class="card dashboard-card">
+                                <div class="card-header">
+                                    <h5 class="card-title">Active Courses</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="card course-card">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">IMS560 - Advance Database Management</h6>
+                                                    <p class="card-text">Instructor: Dr. Mohd Ridwan</p>
+                                                    <div class="progress mb-2">
+                                                        <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+                                                    </div>
+                                                    <p class="card-text"><small class="text-muted">Next Due: Assignment 3 (Tomorrow)</small></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card course-card">
+                                                <div class="card-body">
+                                                    <h6 class="card-title">IMS566 - Web Application and Content Management System</h6>
+                                                    <p class="card-text">Instructor: Dr. Muhammad Asyraf</p>
+                                                    <div class="progress mb-2">
+                                                        <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">40%</div>
+                                                    </div>
+                                                    <p class="card-text"><small class="text-muted">Next Due: Quiz 5 (3 days)</small></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Recent Activity -->
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">Recent Activity</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="activity-item">
+                                        <i class="fas fa-circle text-primary activity-icon"></i>
+                                        <div class="activity-content">
+                                            <h6>Assignment Submitted</h6>
+                                            <p>Proposal for Project Management</p>
+                                            <small class="text-muted">2 hours ago</small>
+                                        </div>
+                                    </div>
+                                    <div class="activity-item">
+                                        <i class="fas fa-circle text-success activity-icon"></i>
+                                        <div class="activity-content">
+                                            <h6>Grade Posted</h6>
+                                            <p>New grade posted for "Midterm Exam" in IMS501</p>
+                                            <small class="text-muted">Yesterday</small>
+                                        </div>
+                                    </div>
+                                    <div class="activity-item">
+                                        <i class="fas fa-circle text-warning activity-icon"></i>
+                                        <div class="activity-content">
+                                            <h6>Course Material Updated</h6>
+                                            <p>New lecture notes available for IMS566</p>
+                                            <small class="text-muted">2 days ago</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <!-- Upcoming Assignments -->
+                    <div class="card dashboard-card mb-4">
+                        <div class="card-header">
+                            <h5 class="card-title">Upcoming Assignments</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="upcoming-assignment">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h6>Database Design Project</h6>
+                                        <p class="text-muted mb-0">IMS560</p>
+                                    </div>
+                                    <span class="badge" style="background-color: #dc3545;">Tomorrow</span>
+                                </div>
+                            </div>
+                            <div class="upcoming-assignment">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h6>Report For User Interface</h6>
+                                        <p class="text-muted mb-0">IMS564</p>
+                                    </div>
+                                    <span class="badge" style="background-color: #ffc107;">3 days</span>
+                                </div>
+                            </div>
+                            <div class="upcoming-assignment">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h6>Train Booking System</h6>
+                                        <p class="text-muted mb-0">ENG205</p>
+                                    </div>
+                                    <span class="badge" style="background-color: #28a745;">1 week</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="card dashboard-card">
+                        <div class="card-header">
+                            <h5 class="card-title">Quick Links</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><a href="#" class="quick-link"><i class="fas fa-university me-2"></i>Library</a></li>
+                                <li class="list-group-item"><a href="#" class="quick-link"><i class="fas fa-calendar-alt me-2"></i>Academic Calendar</a></li>
+                                <li class="list-group-item"><a href="#" class="quick-link"><i class="fas fa-graduation-cap me-2"></i></i>Advising</a></li>
+                                <li class="list-group-item"><a href="#" class="quick-link"><i class="fas fa-money-bill me-2"></i>Financial Aid</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer class="footer mt-auto py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Resources</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Student Guide</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Connect</h5>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-12 text-center">
+                <p class="mb-0">&copy; 2024 StudentPortal. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/darkmode.js"></script>
+</body>
+</html>
+
+    

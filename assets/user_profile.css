@@ -1,0 +1,130 @@
+/* General styling for profile page */
+.profile-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Profile image styling */
+.profile-image-wrapper {
+    position: relative;
+}
+
+.large-profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e0e0e0;
+}
+
+.edit-photo {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    border-radius: 50%;
+}
+
+/* Profile details */
+.profile-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+
+.profile-stats h5 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Card section */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 100%; /* Ensure all cards take the full width of their parent */
+    max-width: 600px; /* Ensure consistent width for all cards */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 15px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card.academic-progress {
+    max-width: none; /* Removes the 600px limit */
+    width: 100%; /* Ensures it takes full container width */
+}
+/* Progress bar styling */
+.progress {
+    height: 10px;
+    border-radius: 5px;
+    background-color: #e9ecef;
+}
+
+.progress-bar {
+    border-radius: 5px;
+    transition: width 2s ease-in-out; /* Animation for progress bar */
+}
+
+/* Form styling */
+.form-label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-control {
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .profile-stats .row > div {
+        margin-bottom: 15px;
+    }
+
+    .navbar-brand {
+        font-size: 1rem;
+    }
+}
+
+/* Dark mode specific styling */
+[data-theme="dark"] .profile-card,
+[data-theme="dark"] .card {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    border-color: #404040;
+}
+
+[data-theme="dark"] .form-label,
+[data-theme="dark"] .profile-name,
+[data-theme="dark"] .text-muted {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .progress {
+    background-color: #404040;
+}
+
+[data-theme="dark"] .progress-bar {
+    background-color: #06c;
+}

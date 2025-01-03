@@ -1,0 +1,283 @@
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --card-bg: #2d2d2d;
+    --border-color: #404040;
+}
+
+[data-theme="dark"] body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Navbar Dark Mode */
+[data-theme="dark"] .navbar {
+    background-color: var(--card-bg) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+[data-theme="dark"] .navbar .container-fluid {
+    background: -webkit-linear-gradient(to right, #536976, #292e49); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #536976, #292e49);
+}
+
+[data-theme="dark"] .navbar .nav-link {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .navbar-brand {
+    color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .nav-link {
+    color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .navbar-toggler {
+    border-color: var(--border-color) !important;
+    color: var (--text-color) !important;
+}
+
+[data-theme="dark"] .navbar-toggler-icon {
+    filter: invert(1) !important;
+}
+
+[data-theme="dark"] #sidebar {
+    background: var(--card-bg);
+    background-color: var(--card-bg);
+    border-right: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .card {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .table {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .dropdown-menu {
+    background-color: var(--card-bg) !important;
+    border-color: var(--border-color) !important;
+}
+
+[data-theme="dark"] .dropdown-item {
+    color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .dropdown-item:hover {
+    background-color: var(--bg-color-alt) !important;
+}
+
+/* Dashboard-specific dark mode styles */
+[data-theme="dark"] #content {
+    background: var(--bg-color); /* Override any other background property */
+    background-color: var(--bg-color); /* Use the dark background color variable */
+}
+
+[data-theme="dark"] .dashboard-card {
+    background-color: var(--card-bg); /* Use the dark card background color */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Adjust shadow for dark mode */
+}
+
+[data-theme="dark"] .card-header {
+    background: var(--card-bg); /* Use a suitable dark background */
+    color: var(--text-color); /* Use the dark text color */
+}
+
+[data-theme="dark"] .progress {
+    background-color: var(--border-color); /* Use a darker color for the progress track */
+}
+
+[data-theme="dark"] .progress-bar {
+    background: var(--card-bg); /* Use a contrasting color for the bar */
+}
+
+[data-theme="dark"] .activity-item {
+    background: rgba(0, 0, 0, 0.2); /* Use a darker background */
+    border-left-color: var(--border-color); /* Adjust border color */
+}
+
+[data-theme="dark"] .quick-link {
+    color: var(--text-color); /* Use the dark text color */
+}
+
+[data-theme="dark"] .quick-link:hover {
+    color: #92DCE5; /* Use a lighter color for hover */
+}
+
+/* Sidebar ul elements */
+[data-theme="dark"] #sidebar ul {
+    background-color: var(--card-bg); /* Use the dark card background color */
+}
+
+[data-theme="dark"] #sidebar ul li a {
+    color: var(--text-color); /* Use the dark text color */
+}
+
+[data-theme="dark"] #sidebar ul li a:hover {
+    background-color: var(--border-color); /* Use the border color for hover background */
+    color: var(--text-color); /* Ensure text color remains consistent on hover */
+}
+
+[data-theme="dark"] .upcoming-assignment {
+    border-bottom-color: var(--border-color); /* Adjust border color */
+}
+
+/* Add these specific overrides */
+[data-theme="dark"] #content {
+    background-color: var(--bg-color);
+}
+
+[data-theme="dark"] .components li a {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .components li.active > a,
+[data-theme="dark"] .components li a:hover {
+    background-color: var(--border-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .navbar-brand,
+[data-theme="dark"] .nav-link,
+[data-theme="dark"] .btn-link {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .sidebar-header {
+    background: -webkit-linear-gradient(to right, #536976, #292e49); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #536976, #292e49);;
+    background-color: whitesmoke;
+    border-bottom: 1px solid var(--border-color);
+    color: white;
+}
+
+[data-theme="dark"] .profile-name, .small-text {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] hr {
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] #content .container-fluid {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .wrapper {
+    background-color: var(--bg-color);
+}
+
+/* Text visibility fixes */
+[data-theme="dark"] .dashboard-card h5,
+[data-theme="dark"] .dashboard-card p,
+[data-theme="dark"] .activity-item h6,
+[data-theme="dark"] .activity-item p,
+[data-theme="dark"] .quick-link,
+[data-theme="dark"] .upcoming-assignment h6,
+[data-theme="dark"] .upcoming-assignment,
+[data-theme="dark"] .course-card .card-title,
+[data-theme="dark"] .course-card .card-text,
+[data-theme="dark"] .course-card {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .text-muted,
+[data-theme="dark"] small.text-muted {
+    color: var(--text-color) !important;
+    opacity: 0.8 !important; /* Slightly dimmed for visual hierarchy */
+}
+
+[data-theme="dark"] .progress-bar {
+    background: -webkit-linear-gradient(to right, #acb6e5, #86fde8); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #acb6e5, #86fde8);
+}
+
+[data-theme="dark"] .activity-item {
+    border-left-color: #d6d6d6;
+}
+
+[data-theme="dark"] .list-group-item {
+    background-color: var(--card-bg) !important;
+    color: var(--text-color) !important;
+    border-color: var(--border-color) !important;
+}
+
+[data-theme="dark"] .list-group-item:hover {
+    background-color: var(--bg-color-alt) !important;
+}
+
+/* Card contrast */
+[data-theme="dark"] .dashboard-card {
+    background-color: var(--card-bg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Adjusted for a more noticeable "pop-up" effect */
+}
+
+[data-theme="dark"] .btn-register {
+    background-color: var(--accent-color) !important;
+    color: var(--text-color) !important;
+    border: none !important;
+}
+
+/* dark mode for user profile */
+[data-theme="dark"] h5,
+[data-theme="dark"] .h5 {
+    color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .profile-stats h5 {
+    color: var(--text-color) !important;
+}
+
+/* white font color for specific elements in dark mode */
+[data-theme="dark"] label.form-label,
+[data-theme="dark"] .card-title,
+[data-theme="dark"] .progress-item span,
+[data-theme="dark"] .progress-item .progress-bar {
+    color: var(--text-color) !important;
+}
+
+/* Academic progress percentages */
+[data-theme="dark"] .progress-item span:last-child {
+    color: var(--text-color) !important;
+}
+
+/*footer*/
+/* Dark mode footer */
+[data-theme="dark"] .footer {
+    background: -webkit-linear-gradient(to right, #536976, #292e49); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #536976, #292e49);
+    border-top: 1px solid var(--border-color) !important;
+}
+
+[data-theme="dark"] .footer h5 {
+    color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .footer ul li a {
+    color: var(--text-color) !important;
+    opacity: 0.8;
+}
+
+[data-theme="dark"] .footer ul li a:hover {
+    color: var(--accent-color) !important;
+    opacity: 1;
+}
+
+[data-theme="dark"] .social-links a {
+    color: var(--text-color) !important;
+    opacity: 0.8;
+}
+
+[data-theme="dark"] .social-links a:hover {
+    color: var(--accent-color) !important;
+    opacity: 1;
+}
+
+[data-theme="dark"] .footer hr {
+    border-color: var(--border-color) !important;
+}
+
